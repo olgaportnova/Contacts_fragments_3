@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/main"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image_placholder"
+        android:layout_gravity="center"
+        android:src="@drawable/image_contact"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+    <TextView
+        android:id="@+id/text_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        style="@style/screen_title"
+        android:text="@string/chose_contact_from_list"/>
+
+<LinearLayout
+    android:id="@+id/contact_details"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_details"
+        style="@style/screen_title"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/pink_main"
+        android:layout_marginStart="118dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/name"
+                style="@style/details_fields_name" />
+
+            <View style="@style/divider_gray_horiz_left" />
+
+            <TextView
+                android:text="@string/surname"
+                style="@style/details_fields_name" />
+
+            <View style="@style/divider_gray_horiz_left" />
+
+            <TextView
+                android:text="@string/number"
+                style="@style/details_fields_name" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/divider_gray" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                android:enabled="false"
+                android:background="@android:color/transparent"
+                style="@style/details_values" />
+
+            <View style="@style/divider_gray_horiz_right" />
+
+            <EditText
+                android:id="@+id/surname"
+                android:enabled="false"
+                style="@style/details_values"
+                android:background="@android:color/transparent"/>
+
+            <View style="@style/divider_gray_horiz_right" />
+
+            <EditText
+                android:id="@+id/number"
+                android:enabled="false"
+                style="@style/details_values"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_bt"
+        style="@style/bt_details_screen" />
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/bt_details_screen"
+        android:text="@string/save_bt" />
+
+
+</LinearLayout>
+</LinearLayout>
+
+
+
+

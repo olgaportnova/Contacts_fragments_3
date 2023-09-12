@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Contacts_fragments</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contacts_list">Contacts list</string>
+    <string name="contact_details">Contact details</string>
+    <string name="name">Имя:</string>
+    <string name="surname">Фамилия:</string>
+    <string name="number">Номер:</string>
+    <string name="edit_bt">Edit Contact</string>
+    <string name="save_bt">Save</string>
+    <string name="nothing_changed">Вы не внесли никаких изменений</string>
+    <string name="chose_contact_from_list">Выберите контакт из списка, чтобы посмотреть детали.</string>
+</resources>
