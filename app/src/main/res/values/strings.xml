@@ -9,6 +9,12 @@
     <string name="number">Номер:</string>
     <string name="edit_bt">Edit Contact</string>
     <string name="save_bt">Save</string>
+    <string name="search_hint">Введите для поиска</string>
     <string name="nothing_changed">Вы не внесли никаких изменений</string>
+    <string name="contact_deleted">Контакт удален</string>
+    <string name="contact_delete_title">Удаление контакта</string>
+    <string name="contact_delete_yes">Точно!</string>
+    <string name="contact_delete_no">Пусть пока будет..</string>
+    <string name="contact_delete_message">Вы точно хотите удалить этот контакт навсегда?</string>
     <string name="chose_contact_from_list">Выберите контакт из списка, чтобы посмотреть детали.</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.contacts_fragments
 
+import ContactsFragment
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -12,23 +13,19 @@ class RootActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         sharedViewModel = ViewModelProvider(this)[SharedViewModel::class.java]
+            if (isSmartphoneLayout()) {
+                setSmartphoneLayout()
+            } else {
+                setTabletLayout()
+            }
 
-        if (isSmartphoneLayout()) {
-            setSmartphoneLayout()
-        } else {
-            setTabletLayout()
-        }
-    }
-
-    fun getSharedViewModel(): SharedViewModel {
-        return sharedViewModel
     }
 
     private fun isSmartphoneLayout(): Boolean {
         return resources.configuration.smallestScreenWidthDp < 600 }
 
     private fun setSmartphoneLayout() {
-        setContentView(R.layout.activity_root_tablet)
+        setContentView(R.layout.activity_root)
         val fragment = ContactsFragment()
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainer, fragment)
@@ -36,7 +33,7 @@ class RootActivity : AppCompatActivity() {
     }
 
     private fun setTabletLayout() {
-        setContentView(R.layout.activity_root_tablet)
+        setContentView(R.layout.activity_root)
         val fragment1 = ContactsFragment()
         val fragment2 = createDetailsFragment()
         supportFragmentManager.beginTransaction()
@@ -46,6 +43,6 @@ class RootActivity : AppCompatActivity() {
     }
 
     private fun createDetailsFragment(): DetailsFragment {
-        return DetailsFragment.newInstance(0, "", "", "", ContactsFragment.STATE_SHOW_PLACEHOLDER)
+        return DetailsFragment.newInstance(0, "", "", "", ContactsFragment.STATE_SHOW_PLACEHOLDER,"")
     }
 }

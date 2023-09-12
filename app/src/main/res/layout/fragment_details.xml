@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout
     android:id="@+id/main"
     android:layout_gravity="center"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/image_contact"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="100dp"
+         />
 
     <ImageView
         android:id="@+id/image_placholder"
@@ -27,7 +38,6 @@
 <LinearLayout
     android:id="@+id/contact_details"
     android:layout_gravity="center"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -89,25 +99,28 @@
 
             <EditText
                 android:id="@+id/name"
-                android:enabled="false"
+                style="@style/details_values"
                 android:background="@android:color/transparent"
-                style="@style/details_values" />
+                android:enabled="false"
+                android:maxLines="1" />
 
             <View style="@style/divider_gray_horiz_right" />
 
             <EditText
                 android:id="@+id/surname"
-                android:enabled="false"
                 style="@style/details_values"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:enabled="false"
+                android:maxLines="1" />
 
             <View style="@style/divider_gray_horiz_right" />
 
             <EditText
                 android:id="@+id/number"
-                android:enabled="false"
                 style="@style/details_values"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:enabled="false"
+                android:maxLines="1" />
         </LinearLayout>
 
     </LinearLayout>
@@ -129,6 +142,7 @@
 
 </LinearLayout>
 </LinearLayout>
+    </ScrollView>
 
 
 
