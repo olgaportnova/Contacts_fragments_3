@@ -75,10 +75,13 @@ class ContactsFragment : Fragment(), ContactAdapter.Listener {
     private fun setupRecyclerView() {
         val contacts = sharedViewModel.getContactList().toMutableList()
         adapter = ContactAdapter(contacts, this)
+        val itemDecoration = ItemDecoration(requireContext())
+
 
         binding.recyclerView.apply {
             layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            binding.recyclerView.addItemDecoration(itemDecoration)
             adapter = this@ContactsFragment.adapter
         }
     }
